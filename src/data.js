@@ -56,3 +56,24 @@ export const buyList = [
         totalOrder: 30
     },   
 ]
+
+export const pendingList = [
+    {
+        date: 1,
+        totalOrder: 45
+    },
+    {
+        date: 2,
+        totalOrder: 30
+    },{
+        date: 3,
+        totalOrder: 15
+    },
+    {
+        date: 4,
+        totalOrder: 25
+    },{
+        date: 5,
+        totalOrder: 40
+    },   
+]

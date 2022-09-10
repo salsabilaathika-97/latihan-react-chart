@@ -1,8 +1,9 @@
 import {useEffect, useState} from 'react';
 import './App.css';
 import BarChart from './components/BarChart';
+import LineChart from './components/LineChart';
 import PieChart from './components/PieChart';
-import { buyList, orderList } from './data';
+import { buyList, orderList, pendingList } from './data';
 
 function App() {
   const [dataChart, setDataChart] = useState({
@@ -14,6 +15,14 @@ function App() {
   });
 
   const [buyChart, setBuyChart] = useState({
+    labels: [],
+    datasets: [{
+      label: "",
+      data: [],
+    }],
+  });
+
+  const [pendingChart, setPendingChart] = useState({
     labels: [],
     datasets: [{
       label: "",
@@ -49,11 +58,23 @@ function App() {
     })
   },[])
 
+  useEffect(() => {
+    setPendingChart({
+      labels: pendingList.map(item => item.date),
+      datasets: [{
+        label: 'Ini Data Pending',
+        data: pendingList.map(item => item.totalOrder),
+        backgroundColor: 'rgba(95, 158, 160)'
+      }]
+    })
+  },[])
+
   return (
     <div className="App">
       <h1>Test</h1>
       {!!dataChart.labels.length && <BarChart dataChart={dataChart}/>}
       {!!buyChart.labels.length && <PieChart buyChart={buyChart}/>}
+      {!!pendingChart.labels.length && <LineChart pendingChart={pendingChart}/>}
     </div>
   );
 }
