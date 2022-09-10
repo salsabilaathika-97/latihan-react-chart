@@ -71,7 +71,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Test</h1>
+      <h1>Latihan Membuat Chart Menggunakan React</h1>
       {!!dataChart.labels.length && <BarChart dataChart={dataChart}/>}
       {!!buyChart.labels.length && <PieChart buyChart={buyChart}/>}
       {!!pendingChart.labels.length && <LineChart pendingChart={pendingChart}/>}
