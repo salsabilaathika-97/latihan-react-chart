@@ -32,6 +32,6 @@ export const orderList = [
     },
     {
         date: 10,
-        totalOrder: 65
+        totalOrder: 40
     },    
 ]
