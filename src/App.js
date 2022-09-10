@@ -26,7 +26,8 @@ function App() {
       labels: orderList.map(item => item.date),
       datasets: [{
         label: 'Ini Data Penjualan',
-        data: orderList.map(item => item.totalOrder)
+        data: orderList.map(item => item.totalOrder),
+        backgroundColor: 'rgba(65, 105, 225)',
       }]
     })
   },[])
@@ -36,7 +37,14 @@ function App() {
       labels: buyList.map(item => item.date),
       datasets: [{
         label: 'Ini Data Pembelian',
-        data: buyList.map(item => item.totalOrder)
+        data: buyList.map(item => item.totalOrder),
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
+          'rgba(255, 206, 86, 0.2)',
+          'rgba(75, 192, 192, 0.2)',
+          'rgba(153, 102, 255, 0.2)',
+        ],
       }]
     })
   },[])
