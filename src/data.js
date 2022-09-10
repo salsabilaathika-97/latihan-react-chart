@@ -35,3 +35,24 @@ export const orderList = [
         totalOrder: 40
     },    
 ]
+
+export const buyList = [
+    {
+        date: 1,
+        totalOrder: 65
+    },
+    {
+        date: 2,
+        totalOrder: 35
+    },{
+        date: 3,
+        totalOrder: 15
+    },
+    {
+        date: 4,
+        totalOrder: 20
+    },{
+        date: 5,
+        totalOrder: 30
+    },   
+]
