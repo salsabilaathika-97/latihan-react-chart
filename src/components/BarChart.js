@@ -10,7 +10,7 @@ ChartJS.register(
 const BarChart = ({dataChart}) => {
  
     return (
-        <div>
+        <div style = {{ width: "1000px" }}>
             <Bar data={dataChart} />
         </div>
     )

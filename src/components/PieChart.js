@@ -6,7 +6,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 const PieChart = ({buyChart}) => {
     return (
-        <div>
+        <div style = {{ width: "1000px" }}>
             <Pie data = {buyChart}/>
         </div>
     )

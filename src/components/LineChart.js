@@ -22,7 +22,7 @@ ChartJS.register(
 
 const LineChart = ({pendingChart}) => {
     return (
-        <div>
+        <div style = {{ width: "1000px" }}>
             <Line data={pendingChart} />
         </div>
     )
